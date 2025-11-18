@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Universidad - Descargas y Previsualización</title>
+    <style>
+        /* Estilos CSS (puedes copiar los mismos del ejemplo anterior) */
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .file-name {
+            font-weight: bold;
+        }
+        .actions a {
+            padding: 8px 12px;
+            margin-left: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-view {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-download {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-view:hover { background-color: #218838; }
+        .btn-download:hover { background-color: #0056b3; }
+        .info-psd {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Presentación del Proyecto Final Universitario</h1>
+        <p>
+            Aquí puedes previsualizar los documentos compatibles en el navegador o descargarlos.
+        </p>
+
+        <h2>Archivos del Proyecto:</h2>
+
+        <!-- Item 1: Archivo PSD (Solo descarga) -->
+        <div class="file-item">
+            <span class="file-name">Archivo_Proyecto.psd</span>
+            <div class="actions">
+                <!-- Para PSD, solo ofrecemos descarga, ya que no se puede abrir en navegador -->
+                <a href="archivos_proyecto/proyecto.psd" download="Proyecto_Final_Diseño" class="btn-download">
+                    Descargar PSD
+                </a>
+            </div>
+        </div>
+        <p class="info-psd">Nota: Los archivos PSD solo se pueden descargar y abrir con software especializado (Photoshop).</p>
+
+        <!-- Item 2: Documento (PDF o TXT/HTML) -->
+        <div class="file-item">
+            <span class="file-name">Informe_Final.pdf</span>
+            <div class="actions">
+                <!-- Enlace para abrir en el navegador (omite el atributo 'download') -->
+                <a href="./documento_informe.pdf" target="_blank" class="btn-view">
+                    Abrir en Navegador
+                </a>
+                <!-- Enlace para descargar (usa el atributo 'download') -->
+                <a href="archivos_proyecto/documento_informe.pdf" download="Informe_Proyecto_Final" class="btn-download">
+                    Descargar
+                </a>
+            </div>
+        </div>
+
+        <!-- Item 3: Presentación (PPTX no se abre nativamente en navegador, solo descarga) -->
+        <div class="file-item">
+            <span class="file-name">Presentacion.pptx</span>
+            <div class="actions">
+                <!-- PPTX no se puede previsualizar en navegador sin servicios de terceros -->
+                <a href="archivos_proyecto/presentacion.pptx" download="Presentacion_PPTX" class="btn-download">
+                    Descargar PPTX
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
